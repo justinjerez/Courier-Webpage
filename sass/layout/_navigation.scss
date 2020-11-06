@@ -1,0 +1,254 @@
+.navigation {
+  position: relative;
+  z-index: 1;
+  &__logo-box {
+    padding: 4rem 0rem;
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    @include respond(tab-land) {
+      padding: 4rem 6rem;
+      max-width: $grid-width;
+    }
+
+    @include respond(tab-port) {
+      max-width: $grid-width-medium;
+      position: absolute;
+      top: 3.5rem;
+      padding: 0;
+      left: 8rem;
+    }
+
+    @include respond(phone) {
+      position: unset;
+      padding: 4rem 6rem;
+      left: 0;
+      top: 0;
+      max-width: $grid-width-small;
+    }
+
+    & > img {
+      display: inline-block;
+      cursor: pointer;
+      max-width: 11rem;
+
+      @include respond(tab-port) {
+        width: 10rem;
+      }
+
+      @include respond(phone) {
+        width: 8rem;
+      }
+    }
+  }
+
+  &__check {
+    display: none;
+  }
+
+  &__button {
+    background-image: linear-gradient(to right, $color-green-light, $color-green-dark);
+    width: 7rem;
+    height: 7rem;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 1000;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+    text-align: center;
+    cursor: pointer;
+    display: none;
+
+    @include respond(tab-port) {
+      display: unset;
+      top: 4.5rem;
+      right: 8rem;
+    }
+
+    @include respond(phone) {
+      top: 4.5rem;
+      right: 8rem;
+    }
+  }
+
+  &__background {
+    display: none;
+    width: 6rem;
+    height: 6rem;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 100;
+    background-image: linear-gradient(
+      to right,
+      $color-green-light,
+      $color-green-dark
+    );
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include respond(tab-port) {
+      display: unset;
+      top: 5rem;
+      right: 8.7rem;
+    }
+
+    @include respond(phone) {
+      top: 5rem;
+      right: 8.7rem;
+    }
+  }
+
+  &__nav {
+    z-index: 1500;
+    opacity: 1;
+    margin-top: 3rem;
+    float: right;
+
+    @include respond(tab-port) {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      z-index: 500;
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      float: none;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: inline-block;
+
+    @include respond(tab-port) {
+      @include absCenter;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 0 1rem;
+
+    @include respond(tab-port) {
+      display: block;
+      margin: 4rem;
+      float: none;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 2rem;
+      font-weight: 300;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 2rem 2rem;
+      border-radius: 3px;
+      letter-spacing: 0.2rem;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 230%;
+      transition: all 0.4s;
+
+      @include respond(tab-port) {
+        visibility: hidden;
+        font-size: 2.5rem;
+        padding: 2rem 4rem;
+        letter-spacing: 0.4rem;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-green-dark;
+      transform: translateX(1rem);
+    }
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-white;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__check:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__check:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+    background-color: $color-grey-dark-1;
+  }
+
+  &__check:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+    background-color: $color-grey-dark-1;
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__check:checked ~ &__button {
+    background-image: linear-gradient(to right, $color-white, $color-white);
+  }
+
+  &__check:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__check:checked ~ &__nav {
+    width: 100%;
+    opacity: 1;
+  }
+
+  &__check:checked ~ &__nav &__list &__item &__link {
+    visibility: visible;
+  }
+}

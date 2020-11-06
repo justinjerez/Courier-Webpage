@@ -1,0 +1,21 @@
+.team {
+  text-align: center;
+
+  &__employee {
+    padding: 4rem 2rem;
+
+    &--img {
+        width: 25rem;
+        margin-bottom: 1rem;
+        margin-left: 1.5rem;
+    }
+
+    &--name{
+        display: none;
+    }
+  }
+
+  &__charge {
+    opacity: none;
+  }
+}

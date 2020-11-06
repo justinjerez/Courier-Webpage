@@ -1,0 +1,40 @@
+.section-header {
+  background-color: $color-grey-light-1;  
+}
+
+.section-about {
+  background-color: $color-grey-light-1;
+  padding: 8rem 0;
+
+  @include respond(tab-port) {
+    padding: 2rem 0 4rem 0;
+  }
+}
+
+.section-benefits {
+  background-color: $color-grey-light-1;
+  padding-bottom: 12rem;
+}
+
+.section-team {
+  background-color: $color-grey-light-1;
+  padding-bottom: 27rem;
+
+  @include respond(tab-port) {
+    padding-bottom: 24rem;
+  }
+}
+
+.section-newsletter {
+  background-image: linear-gradient(
+    to right,
+    $color-green-dark,
+    $color-green-light
+  );
+  transform: skewY(-3deg);
+  margin-top: -12rem;
+}
+
+.footer {
+  padding-top: 8rem;
+}

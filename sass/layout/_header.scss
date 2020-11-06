@@ -1,0 +1,81 @@
+.header {
+  position: relative;
+
+  @include respond(tab-port) {
+    margin: auto 0;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 93.1vh;
+    background-image: linear-gradient(
+      to right,
+      $color-green-dark 80%,
+      $color-green-light
+    );
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 100% 100%);
+    -webkit-clip-path: polygon(35% 0, 100% 0, 100% 100%, 100% 100%);
+    z-index: 0;
+
+    @include respond(tab-land) {
+      clip-path: polygon(35% 0, 100% 0, 100% 80%, 100% 80%);
+      -webkit-clip-path: polygon(35% 0, 100% 0, 100% 80%, 100% 80%);
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    padding: 2rem 6rem;
+
+    @include respond(tab-port) {
+      padding-top: 22rem;
+    }
+
+    @include respond(phone) {
+      padding-top: 0rem;
+    }
+
+    & > .row {
+      @include respond(tab-port) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__textbox {
+    margin: 10rem 0;
+
+    @include respond(tab-port) {
+      text-align: center;
+      margin: 7rem 0;
+    }
+
+    @include respond(tab-land) {
+      margin: 7rem 0;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    width: 80%;
+    margin-bottom: 2.5rem;
+
+    @include respond(tab-port) {
+      width: auto;
+      margin-bottom: 4rem;
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
