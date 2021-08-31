@@ -13,6 +13,166 @@ $breakpoint argument choices:
 
 ORDER: Base + Typography > General layout + grid > Page Layout > Components
 */
+@-webkit-keyframes Up {
+  from {
+    opacity: 0;
+    transform: translateY(20%); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-moz-keyframes Up {
+  from {
+    opacity: 0;
+    transform: translateY(20%); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-ms-keyframes Up {
+  from {
+    opacity: 0;
+    transform: translateY(20%); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-o-keyframes Up {
+  from {
+    opacity: 0;
+    transform: translateY(20%); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@keyframes Up {
+  from {
+    opacity: 0;
+    transform: translateY(20%); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-webkit-keyframes Up {
+  from {
+    opacity: 0;
+    transform: translateY(20vh); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-moz-keyframes Up {
+  from {
+    opacity: 0;
+    transform: translateY(20vh); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-ms-keyframes Up {
+  from {
+    opacity: 0;
+    transform: translateY(20vh); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-o-keyframes Up {
+  from {
+    opacity: 0;
+    transform: translateY(20vh); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@keyframes Up {
+  from {
+    opacity: 0;
+    transform: translateY(20vh); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-webkit-keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20vh); }
+  to {
+    opacity: 1;
+    transform: translateX(0%); } }
+
+@-moz-keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20vh); }
+  to {
+    opacity: 1;
+    transform: translateX(0%); } }
+
+@-ms-keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20vh); }
+  to {
+    opacity: 1;
+    transform: translateX(0%); } }
+
+@-o-keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20vh); }
+  to {
+    opacity: 1;
+    transform: translateX(0%); } }
+
+@keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20vh); }
+  to {
+    opacity: 1;
+    transform: translateX(0%); } }
+
+@-webkit-keyframes toLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20vh); }
+  to {
+    opacity: 1;
+    transform: translateX(0%); } }
+
+@-moz-keyframes toLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20vh); }
+  to {
+    opacity: 1;
+    transform: translateX(0%); } }
+
+@-ms-keyframes toLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20vh); }
+  to {
+    opacity: 1;
+    transform: translateX(0%); } }
+
+@-o-keyframes toLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20vh); }
+  to {
+    opacity: 1;
+    transform: translateX(0%); } }
+
+@keyframes toLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20vh); }
+  to {
+    opacity: 1;
+    transform: translateX(0%); } }
+
 /* GRID LAYOUT */
 *,
 *::after,
@@ -117,14 +277,33 @@ main {
 .u-margin-bottom-huge {
   margin-bottom: 12rem; }
 
+/* Animations */
+.section-about.actived .about__card {
+  -webkit-animation: Up 1s ease-in-out forwards;
+  -moz-animation: Up 1s ease-in-out forwards;
+  -ms-animation: Up 1s ease-in-out forwards;
+  -o-animation: Up 1s ease-in-out forwards;
+  animation: Up 1s ease-in-out forwards;
+  animation-delay: calc(var(--order) * 200ms); }
+
+.section-about.actived .btn {
+  opacity: 0;
+  -webkit-animation: Up 0.3s ease-in-out forwards;
+  -moz-animation: Up 0.3s ease-in-out forwards;
+  -ms-animation: Up 0.3s ease-in-out forwards;
+  -o-animation: Up 0.3s ease-in-out forwards;
+  animation: Up 0.3s ease-in-out forwards;
+  animation-delay: calc(var(--order) * 200ms); }
+
 .about__card {
   background-image: linear-gradient(to right, #69B76B, #9BD069);
+  opacity: 0;
   display: inline-block;
   padding: 6rem 4rem;
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
-  transition: all .3s; }
+  transition: all 0.3s; }
   .about__card:hover {
     transform: scale(1.1) translateY(-2rem);
     box-shadow: 0 2rem 2.5rem rgba(0, 0, 0, 0.1); }
@@ -158,6 +337,7 @@ main {
       background-size: cover;
       text-align: center; } }
   .benefits__price {
+    opacity: 0;
     font-size: 6.2rem;
     font-weight: 200;
     line-height: 1.2;
@@ -168,6 +348,7 @@ main {
       text-align: center;
       font-weight: 200; }
   .benefits__title {
+    opacity: 0;
     font-size: 3.5rem;
     margin-top: 6rem;
     text-transform: uppercase;
@@ -183,6 +364,7 @@ main {
         padding-left: 0;
         list-style: none; } }
   .benefits__item {
+    opacity: 0;
     font-size: 2rem;
     font-weight: 300; }
     .benefits__item:not(:last-child) {
@@ -197,6 +379,33 @@ main {
     width: 100%;
     height: 100%;
     background-color: #f7f7f7; }
+
+/* Animations */
+.section-benefits.actived .benefits__price,
+.section-benefits.actived .benefits__title {
+  -webkit-animation: toRight 1s ease-in-out forwards;
+  -moz-animation: toRight 1s ease-in-out forwards;
+  -ms-animation: toRight 1s ease-in-out forwards;
+  -o-animation: toRight 1s ease-in-out forwards;
+  animation: toRight 1s ease-in-out forwards;
+  animation-delay: calc(var(--order) * 200ms); }
+
+.section-benefits.actived .benefits__item {
+  -webkit-animation: toLeft 1s ease-in-out forwards;
+  -moz-animation: toLeft 1s ease-in-out forwards;
+  -ms-animation: toLeft 1s ease-in-out forwards;
+  -o-animation: toLeft 1s ease-in-out forwards;
+  animation: toLeft 1s ease-in-out forwards;
+  animation-delay: calc(var(--order) * 200ms); }
+
+.section-benefits.actived .btn {
+  opacity: 0;
+  -webkit-animation: Up 1s ease-in-out forwards;
+  -moz-animation: Up 1s ease-in-out forwards;
+  -ms-animation: Up 1s ease-in-out forwards;
+  -o-animation: Up 1s ease-in-out forwards;
+  animation: Up 1s ease-in-out forwards;
+  animation-delay: calc(var(--order) * 200ms); }
 
 .btn, .btn:visited, .btn:link {
   text-transform: uppercase;
@@ -350,6 +559,7 @@ main {
 .team {
   text-align: center; }
   .team__employee {
+    opacity: 0;
     padding: 4rem 2rem; }
     .team__employee--img {
       width: 25rem;
@@ -358,7 +568,24 @@ main {
     .team__employee--name {
       display: none; }
   .team__charge {
-    opacity: none; }
+    opacity: 0; }
+
+/* Animations */
+.section-team.actived .team__employee {
+  -webkit-animation: Up 1s ease-in-out forwards;
+  -moz-animation: Up 1s ease-in-out forwards;
+  -ms-animation: Up 1s ease-in-out forwards;
+  -o-animation: Up 1s ease-in-out forwards;
+  animation: Up 1s ease-in-out forwards;
+  animation-delay: calc(var(--order) * 200ms); }
+
+.section-team.actived .team__charge {
+  -webkit-animation: Up 1s ease-in-out forwards;
+  -moz-animation: Up 1s ease-in-out forwards;
+  -ms-animation: Up 1s ease-in-out forwards;
+  -o-animation: Up 1s ease-in-out forwards;
+  animation: Up 1s ease-in-out forwards;
+  animation-delay: calc(var(--order) * 200ms); }
 
 .row {
   max-width: 114rem;
@@ -444,6 +671,7 @@ main {
         display: flex;
         flex-direction: column-reverse; } }
   .header__textbox {
+    opacity: 0;
     margin: 10rem 0; }
     @media (max-width: 56.25em) {
       .header__textbox {
@@ -463,6 +691,23 @@ main {
         width: 100%; } }
   .header__img {
     width: 100%; }
+
+/* Animations */
+.section-header.actived .header__textbox {
+  -webkit-animation: toRight 1s ease-in-out forwards;
+  -moz-animation: toRight 1s ease-in-out forwards;
+  -ms-animation: toRight 1s ease-in-out forwards;
+  -o-animation: toRight 1s ease-in-out forwards;
+  animation: toRight 1s ease-in-out forwards;
+  animation-delay: calc(var(--order) * 200ms); }
+
+.section-header.actived .header__img {
+  -webkit-animation: Up 1s ease-in-out forwards;
+  -moz-animation: Up 1s ease-in-out forwards;
+  -ms-animation: Up 1s ease-in-out forwards;
+  -o-animation: Up 1s ease-in-out forwards;
+  animation: Up 1s ease-in-out forwards;
+  animation-delay: calc(var(--order) * 200ms); }
 
 .navigation {
   position: relative;
