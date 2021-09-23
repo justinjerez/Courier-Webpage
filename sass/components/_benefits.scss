@@ -15,8 +15,8 @@
   @include respond(tab-land) {
     background-image: linear-gradient(105deg,
         $color-green-dark 0,
-        $color-green-light 55%,
-        transparent 45%),
+        $color-green-light 70%,
+        transparent 30%),
       url(/img/rosebox-BFdSCxmqvYc-unsplash.jpg);
   }
 

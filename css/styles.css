@@ -333,7 +333,7 @@ main {
   background-position: right; }
   @media (max-width: 75em) {
     .benefits {
-      background-image: linear-gradient(105deg, #69B76B 0, #9BD069 55%, transparent 45%), url(/img/rosebox-BFdSCxmqvYc-unsplash.jpg); } }
+      background-image: linear-gradient(105deg, #69B76B 0, #9BD069 70%, transparent 30%), url(/img/rosebox-BFdSCxmqvYc-unsplash.jpg); } }
   @media (max-width: 56.25em) {
     .benefits {
       background-image: linear-gradient(to right, rgba(105, 183, 107, 0.9), rgba(155, 208, 105, 0.9)), url(/img/rosebox-BFdSCxmqvYc-unsplash.jpg);
