@@ -12,6 +12,14 @@
   background-repeat: no-repeat;
   background-position: right;
 
+  @include respond(tab-land) {
+    background-image: linear-gradient(105deg,
+        $color-green-dark 0,
+        $color-green-light 55%,
+        transparent 45%),
+      url(/img/rosebox-BFdSCxmqvYc-unsplash.jpg);
+  }
+
   @include respond(tab-port) {
     background-image: linear-gradient(to right,
         rgba($color-green-dark, 0.9),
