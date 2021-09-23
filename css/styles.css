@@ -569,7 +569,7 @@ main {
     .newsletter__email:active, .newsletter__email:focus {
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
       transform: translateY(-3px); }
-  .newsletter > button {
+  .newsletter .btn {
     opacity: 0; }
 
 /* Animations */

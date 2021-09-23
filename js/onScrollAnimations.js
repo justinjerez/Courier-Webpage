@@ -2,7 +2,7 @@ const targets = document.querySelectorAll('section, footer');
 
 const options = {
     root: null,
-    rootMargin: '0px 0px -70% 0px',
+    rootMargin: '0px 0px -60% 0px',
     treshold: 0
 }
 
