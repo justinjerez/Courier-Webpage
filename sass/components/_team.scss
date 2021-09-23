@@ -6,13 +6,13 @@
     padding: 4rem 2rem;
 
     &--img {
-        width: 25rem;
-        margin-bottom: 1rem;
-        margin-left: 1.5rem;
+      width: 25rem;
+      margin-bottom: 1rem;
+      margin-left: 1.5rem;
     }
 
-    &--name{
-        display: none;
+    &--name {
+      display: none;
     }
   }
 
@@ -22,11 +22,7 @@
 }
 
 /* Animations */
-.section-team.actived .team__employee {
-  @include animation('Up 1s ease-in-out forwards');
-  animation-delay: calc(var(--order) * 200ms);
-}
-
+.section-team.actived .team__employee,
 .section-team.actived .team__charge {
   @include animation('Up 1s ease-in-out forwards');
   animation-delay: calc(var(--order) * 200ms);

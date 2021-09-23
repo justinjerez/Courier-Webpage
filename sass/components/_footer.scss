@@ -21,15 +21,14 @@
   }
 
   &__link {
+
     &,
     &:link,
     &:visited {
       position: relative;
-      background-image: linear-gradient(
-        to right,
-        $color-green-dark,
-        $color-green-light
-      );
+      background-image: linear-gradient(to right,
+          $color-green-dark,
+          $color-green-light);
       color: transparent;
       font-size: 2rem;
       font-weight: 500;
@@ -45,11 +44,9 @@
       height: 4px;
       top: 3rem;
       left: 0;
-      background-image: linear-gradient(
-        to right,
-        $color-green-dark,
-        $color-green-light
-      );
+      background-image: linear-gradient(to right,
+          $color-green-dark,
+          $color-green-light);
       transition: all 0.3s;
       border-radius: 10rem;
     }
@@ -62,7 +59,7 @@
 
   &__information {
     padding: 4rem 0 0 20rem;
-    
+
     @include respond(tab-port) {
       text-align: center;
       padding: 0;
@@ -70,11 +67,12 @@
   }
 
   &__contact {
+    opacity: 0;
     display: block;
     line-height: 1.4;
     padding-top: 2rem;
     cursor: pointer;
-    
+
     @include respond(tab-port) {
       text-align: center;
       padding: 1rem 0;
@@ -94,4 +92,11 @@
       padding-bottom: 4rem;
     }
   }
+}
+
+
+/* Animations */
+.footer.actived .footer__contact {
+  @include animation('Up 1s ease-in-out forwards');
+  animation-delay: calc(var(--order) * 200ms);
 }

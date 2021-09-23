@@ -1,8 +1,8 @@
-const targets = document.querySelectorAll('section');
+const targets = document.querySelectorAll('section, footer');
 
 const options = {
     root: null,
-    rootMargin: '0px 0px -50% 0px',
+    rootMargin: '0px 0px -70% 0px',
     treshold: 0
 }
 
