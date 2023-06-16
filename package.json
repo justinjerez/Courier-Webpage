@@ -1,5 +1,5 @@
 {
-  "name": "e-commerce-design",
+  "name": "courier-landing-page",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,6 @@
   "author": "Justin Jerez",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^6.0.1"
+    "node-sass": "^8.0"
   }
 }
