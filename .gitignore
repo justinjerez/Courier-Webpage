@@ -1,3 +1,4 @@
 .vscode
-nbprojects
-node_modules
+/css
+/nbprojects
+/node_modules
