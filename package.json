@@ -1,14 +1,15 @@
 {
-  "name": "e-commerce-design",
+  "name": "courier-landing-page",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+    "build": "sass sass/main.scss css/styles.css",
+    "compile:sass": "sass sass/main.scss css/styles.css -w"
   },
   "author": "Justin Jerez",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^6.0.1"
+    "sass": "^1.63.4"
   }
 }
