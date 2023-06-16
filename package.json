@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass sass/main.scss css/styles.css",
-    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+    "build": "sass sass/main.scss css/styles.css",
+    "compile:sass": "sass sass/main.scss css/styles.css -w"
   },
   "author": "Justin Jerez",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^8.0"
+    "sass": "^1.63.4"
   }
 }
