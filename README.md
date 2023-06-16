@@ -12,8 +12,5 @@ This is a small but beautifully designed landing page. This was created as a per
 
 - First, you will need to clone this repository using the following command `git clone https://github.com/jerezjustin/courier-landing-page.git`.
 - After that open the project using the editor of your choice and install the dependencies using the command `npm install`, this will install node-sass which is the only dependency for this project.
-- Finally you can listen to the changes of the styles running `npm run compile:sass` this will compile the SCSS files into a `style.css` file.
+- Finally you can compile the scss files into css running the command `npm run build`. Aditionally you can run `npm run compile:sass` which will watch for any changes in the scss files.
 - Open the index.html file in your browser of choice and there you can see the landing page.
-
-> **Warning**
-> To successfully compile the scss files into css, you'll need to hit save in one of the files inside the `sass` folder.
